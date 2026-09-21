@@ -109,4 +109,4 @@ name = "interval-server"
 required-features = ["handshake"]
 
 [patch.crates-io]
-tungstenite = { git = "https://github.com/rustdesk-org/tungstenite-rs", rev = "b8aa247f7fd36f802b8973c7469e5affe9c205d0" }
+tungstenite = { git = "https://github.com/rustdesk-org/tungstenite-rs", rev = "a7644f238bfebc5c88eb3bc8676759e1d76a2203" }
