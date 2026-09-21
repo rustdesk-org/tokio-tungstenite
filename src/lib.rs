@@ -271,6 +271,13 @@ impl<S> WebSocketStream<S> {
     /// Returns a reference to the configuration of the tungstenite stream.
     pub fn get_config(&self) -> &WebSocketConfig {
         self.inner.get_config()
+    }    
+
+    /// Applies `set_func` to the configuration of the tungstenite stream.
+    ///
+    /// Panics if the resulting config is invalid, e.g. `max_write_buffer_size <= write_buffer_size`.
+    pub fn set_config(&mut self, set_func: impl FnOnce(&mut WebSocketConfig)) {
+        self.inner.set_config(set_func)
     }
 
     /// Close the underlying web socket
